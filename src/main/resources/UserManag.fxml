@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.Controllers.UserManag"
+            prefHeight="600.0" prefWidth="800.0"
+            style="-fx-padding: 20;">
+
+    <VBox fx:id="mainContainer" spacing="10" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="User Management" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Button text="Create New User" onAction="#handleCreateUser"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </HBox>
+
+        <!-- Header Row -->
+        <HBox spacing="10" style="-fx-background-color: #f0f0f0; -fx-padding: 10;">
+            <Label text="Name" style="-fx-font-weight: bold;" minWidth="150"/>
+            <Label text="Email" style="-fx-font-weight: bold;" minWidth="200"/>
+            <Label text="Phone" style="-fx-font-weight: bold;" minWidth="100"/>
+            <Label text="Address" style="-fx-font-weight: bold;" minWidth="200"/>
+            <Label text="Role" style="-fx-font-weight: bold;" minWidth="100"/>
+            <Label text="Actions" style="-fx-font-weight: bold;" minWidth="150"/>
+        </HBox>
+
+        <!-- Users will be dynamically added here -->
+        <VBox fx:id="usersContainer" spacing="5"/>
+    </VBox>
+</AnchorPane>

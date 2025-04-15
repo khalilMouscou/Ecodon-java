@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.Controllers.AssociationDashboardController"
+            prefHeight="800" prefWidth="1200">
+    <children>
+        <Label fx:id="welcomeLabel" text="Welcome Association" style="-fx-font-size: 24px;"
+               layoutX="200" layoutY="180"/>
+    </children>
+</AnchorPane>

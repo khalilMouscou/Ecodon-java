@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.Controllers.ReclamationsUserController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Left Sidebar -->
+    <left>
+        <VBox spacing="20" alignment="TOP_CENTER"
+              style="-fx-background-color: #2c3e50; -fx-padding: 30;">
+            <Label text="User Menu" textFill="white"
+                   style="-fx-font-weight: bold; -fx-font-size: 18;"/>
+
+            <Button text="Main"
+                    style="-fx-min-width: 140; -fx-font-size: 14;"
+                    onAction="#handleMainClick"/>
+
+            <Button text="Reclamations"
+                    style="-fx-min-width: 140; -fx-font-size: 14;"
+                    onAction="#handleReclamationsClick"/>
+        </VBox>
+    </left>
+
+    <!-- Main Content -->
+    <center>
+        <AnchorPane>
+            <VBox spacing="10" alignment="CENTER"
+                  AnchorPane.topAnchor="20.0"
+                  AnchorPane.leftAnchor="50.0"
+                  AnchorPane.rightAnchor="50.0">
+
+                <Label text="Créer une Réclamation" style="-fx-font-size: 20px;" />
+
+                <TextField fx:id="titleField" promptText="Titre de la réclamation" />
+                <TextArea fx:id="contentArea" promptText="Contenu de la réclamation" prefHeight="150"/>
+
+                <Button text="Envoyer la Réclamation" onAction="#handleAddReclamation" />
+                <Label fx:id="statusLabel" textFill="green"/>
+            </VBox>
+        </AnchorPane>
+    </center>
+</BorderPane>

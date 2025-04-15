@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/21"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="org.example.Controllers.AdminReclamationsDashboard"
+          fx:id="gridPane"
+          alignment="TOP_CENTER"
+          hgap="10"
+          vgap="10"
+          style="-fx-padding: 20;">
+
+    <!-- Title -->
+    <Label text="Liste des Réclamations"
+           GridPane.columnSpan="2"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #4A90E2;"
+           GridPane.rowIndex="0"
+           GridPane.halignment="CENTER"/>
+
+    <!-- Search Row -->
+    <HBox spacing="10" alignment="CENTER_LEFT" GridPane.rowIndex="1" GridPane.columnSpan="2">
+        <TextField fx:id="searchField"
+                   promptText="Search by title"
+                   onAction="#onSearchClicked"
+                   minWidth="200"/>
+        <Button text="Search"
+                onAction="#onSearchClicked"
+                style="-fx-background-color: #4A90E2; -fx-text-fill: white; -fx-padding: 10 15;"/>
+    </HBox>
+
+    <!-- TableView -->
+    <TableView fx:id="reclamationsTable"
+               prefWidth="900"
+               style="-fx-padding: 10;"
+               GridPane.rowIndex="2"
+               GridPane.columnSpan="2">
+
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200"/>
+            <TableColumn fx:id="contentColumn" text="Content" prefWidth="250"/>
+            <TableColumn fx:id="dateColumn" text="Date" prefWidth="150"/>
+            <TableColumn fx:id="validateColumn" text="Valid" prefWidth="100"/>
+            <TableColumn fx:id="actionsColumn" text="Actions" prefWidth="200"/>
+        </columns>
+    </TableView>
+</GridPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.Controllers.CreateUserController"
+            prefHeight="450.0" prefWidth="600.0"
+            style="-fx-padding: 20;">
+
+    <VBox spacing="15" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <Label text="Create New User" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="100" halignment="RIGHT"/>
+                <ColumnConstraints prefWidth="300"/>
+            </columnConstraints>
+
+            <!-- Name -->
+            <Label text="Name*:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="nomField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <!-- Email -->
+            <Label text="Email*:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="emailField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <!-- Password - CHANGED TO PasswordField -->
+            <Label text="Password*:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <PasswordField fx:id="passwordField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <!-- Phone -->
+            <Label text="Phone*:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="telField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <!-- Address -->
+            <Label text="Address:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="adressField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <!-- Role -->
+            <Label text="Role*:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="roleComboBox" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <Label text="* Required fields" style="-fx-font-style: italic; -fx-text-fill: gray;"/>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Cancel" onAction="#handleCancel"
+                    style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+            <Button text="Create" onAction="#handleSave"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

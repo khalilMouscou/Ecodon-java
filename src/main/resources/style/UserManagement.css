@@ -1,0 +1,72 @@
+/* Background */
+.root {
+    -fx-background-color: #f5f8fa;
+}
+
+/* Title */
+.title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* Create User Button */
+.create-button {
+    -fx-background-color: #0ea5e9;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+.create-button:hover {
+    -fx-background-color: #0284c7;
+}
+
+/* Filters Button */
+.filter-button {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #374151;
+    -fx-font-weight: bold;
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+.filter-button:hover {
+    -fx-background-color: #cbd5e1;
+}
+
+/* Table Styles */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.05), 4, 0, 0, 2);
+}
+
+/* Column Header */
+.table-view .column-header-background {
+    -fx-background-color: #f1f5f9;
+    -fx-border-color: transparent transparent #e5e7eb transparent;
+}
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+}
+
+/* Table Row */
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #f1f5f9;
+}
+.table-row-cell:filled:selected {
+    -fx-background-color: #e0f2fe;
+}
+
+/* Table Cell */
+.table-cell {
+    -fx-padding: 8px;
+    -fx-text-fill: #111827;
+    -fx-font-size: 14px;
+}
